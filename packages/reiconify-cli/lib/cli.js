@@ -2,7 +2,7 @@ const path = require('path')
 const yargs = require('yargs')
 const shell = require('shelljs')
 const which = require('npm-which')(__dirname)
-const transformFiles = require('./transformFiles')
+const transformFiles = require('reiconify/lib/transformFiles')
 
 yargs
   .option('src', {
@@ -72,6 +72,8 @@ const run = async () => {
       esDir: argv.esDir,
       cjsDir: argv.cjsDir,
     })
+  } else {
+    yargs.showHelp()
   }
 }
 

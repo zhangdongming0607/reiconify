@@ -1,18 +1,24 @@
 {
-  "name": "reiconify",
+  "name": "reiconify-cli",
   "version": "1.1.0",
   "description": "Convert SVG icons to React components",
   "repository": "ambar/reiconify",
   "homepage": "https://github.com/ambar/reiconify",
+  "bin": {
+    "reiconify": "./bin/reiconify.js"
+  },
   "main": "lib/index.js",
   "license": "MIT",
   "engines": {
     "node": ">=8"
   },
   "files": [
+    "bin",
+    "docs",
     "lib",
     "index.js",
-    "prettier.config.js",
+    "playland.config.js",
+    "postcss.config.js",
     ".babelrc.js"
   ],
   "scripts": {
@@ -21,24 +27,15 @@
     "release": "standard-version"
   },
   "dependencies": {
-    "@babel/core": "^7.1.0",
-    "@babel/plugin-proposal-class-properties": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0",
-    "cosmiconfig": "^3.1.0",
-    "fancy-log": "^1.3.0",
-    "globby": "^6.1.0",
-    "json5": "^1.0.1",
-    "lodash": "^4.17.4",
-    "mkdirp": "^0.5.1",
-    "pascal-case": "^2.0.1",
-    "postcss": "^6.0.22",
-    "postcss-js": "^1.0.1",
-    "prettier": "^1.7.4",
+    "@uifabric/icons": "^5.0.1",
+    "classnames": "^2.2.5",
+    "office-ui-fabric-react": "^5.0.1",
+    "npm-which": "^3.0.1",
+    "playland": "^1.2.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "string-hash": "^1.1.3",
-    "svgo": "^0.7.2"
+    "shelljs": "^0.7.8",
+    "yargs": "^9.0.1"
   },
   "devDependencies": {
     "babel-core": "^7.0.0-bridge.0",
